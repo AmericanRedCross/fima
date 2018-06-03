@@ -18,9 +18,8 @@ FIMA is the data management application on top of ODK 2 framework. This applicat
 
 
 
-## Under Active Development.
 
 
 
-### App UI and Templating is under development. The core form and data endpoints have been created.
+#### App UI and Templating is under development. The core form and data endpoints have been created.
 
