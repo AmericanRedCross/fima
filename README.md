@@ -17,9 +17,6 @@ FIMA is the data management application on top of ODK 2 framework. This applicat
 ## Required Excel sheets 
 
 
-## Resetting ODK server
-
-
 
 ## Under Active Development.
 
