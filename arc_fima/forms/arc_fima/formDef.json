@@ -269,6 +269,10 @@
         "_row_num": 2
       },
       {
+        "clause": "begin screen",
+        "_row_num": 4
+      },
+      {
         "type": "select_one_dropdown",
         "values_list": "countries_csv",
         "name": "country",
@@ -277,49 +281,59 @@
             "text": "Select Country"
           }
         },
-        "_row_num": 4
-      },
-      {
-        "type": "select_one_dropdown",
-        "values_list": "regions_csv",
-        "name": "region",
-        "display": {
-          "prompt": {
-            "text": "Select Region/State"
-          }
-        },
-        "choice_filter": "choice_item.country === data('country')",
         "_row_num": 5
       },
       {
-        "type": "text",
-        "name": "province",
+        "type": "select_one_dropdown",
+        "values_list": "admin1_csv",
+        "name": "admin1",
         "display": {
           "prompt": {
-            "text": "Enter province"
+            "text": "Select Region/State (Admin 1)"
           }
         },
+        "choice_filter": "choice_item.country === data('country')",
         "_row_num": 6
       },
       {
-        "type": "text",
-        "name": "municipality_district",
+        "type": "select_one_dropdown",
+        "values_list": "admin2_csv",
+        "name": "admin2",
         "display": {
           "prompt": {
-            "text": "Enter Muncipality/District"
+            "text": "Enter Province/City/Town (Admin 2)"
           }
         },
+        "choice_filter": "choice_item.admin1 === data('admin1')",
         "_row_num": 7
       },
       {
-        "type": "text",
-        "name": "barangay_village",
+        "type": "select_one_dropdown",
+        "values_list": "admin3_csv",
+        "name": "admin3",
         "display": {
           "prompt": {
-            "text": "Enter Barangay/Village"
+            "text": "Enter Muncipality/District/County (Admin 3)"
           }
         },
+        "choice_filter": "choice_item.admin2 === data('admin2')",
         "_row_num": 8
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "admin4_csv",
+        "name": "admin4",
+        "display": {
+          "prompt": {
+            "text": "Enter Barangay/Village/Street (Admin 4)"
+          }
+        },
+        "choice_filter": "choice_item.admin3 === data('admin3')",
+        "_row_num": 9
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 10
       },
       {
         "type": "geopoint",
@@ -335,11 +349,11 @@
             "text": "Capture the GPS cordinates of this location"
           }
         },
-        "_row_num": 12
+        "_row_num": 13
       },
       {
         "clause": "begin screen",
-        "_row_num": 13
+        "_row_num": 14
       },
       {
         "type": "select_one",
@@ -353,12 +367,12 @@
             "text": "Select one location type"
           }
         },
-        "_row_num": 16
+        "_row_num": 17
       },
       {
         "clause": "if",
         "condition": "selected(data('Location_Type'), 'financial_intitution')",
-        "_row_num": 17
+        "_row_num": 18
       },
       {
         "type": "select_one",
@@ -369,16 +383,16 @@
             "text": "Financial Institution"
           }
         },
-        "_row_num": 18
+        "_row_num": 19
       },
       {
         "clause": "end if",
-        "_row_num": 19
+        "_row_num": 20
       },
       {
         "clause": "if",
         "condition": "selected(data('Location_Type'), 'market_shop')",
-        "_row_num": 20
+        "_row_num": 21
       },
       {
         "type": "select_one",
@@ -389,15 +403,15 @@
             "text": "Market / Shop"
           }
         },
-        "_row_num": 21
-      },
-      {
-        "clause": "end if",
         "_row_num": 22
       },
       {
-        "clause": "end screen",
+        "clause": "end if",
         "_row_num": 23
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 24
       },
       {
         "type": "text",
@@ -407,7 +421,7 @@
             "text": "Location Name"
           }
         },
-        "_row_num": 24
+        "_row_num": 25
       },
       {
         "type": "image",
@@ -420,7 +434,7 @@
             "text": "Please be sure to ask for permission before taking pictures."
           }
         },
-        "_row_num": 25
+        "_row_num": 26
       },
       {
         "type": "select_one",
@@ -431,12 +445,12 @@
             "text": "Operational status"
           }
         },
-        "_row_num": 27
+        "_row_num": 28
       },
       {
         "clause": "if",
         "condition": "selected(data('Operational_Status'), 'partially_functioning')",
-        "_row_num": 28
+        "_row_num": 29
       },
       {
         "type": "select_multiple",
@@ -450,16 +464,16 @@
             "text": "Select all that apply. Please be sure to ask store owner for their answers , do not answers this question based on your assumptions and /or observations."
           }
         },
-        "_row_num": 29
+        "_row_num": 30
       },
       {
         "clause": "end if",
-        "_row_num": 30
+        "_row_num": 31
       },
       {
         "clause": "if",
         "condition": "selected(data('Operational_Status'), 'not_functioning')",
-        "_row_num": 31
+        "_row_num": 32
       },
       {
         "type": "select_multiple",
@@ -470,11 +484,11 @@
             "text": "Operational Barriers"
           }
         },
-        "_row_num": 32
+        "_row_num": 33
       },
       {
         "clause": "end if",
-        "_row_num": 33
+        "_row_num": 34
       },
       {
         "type": "text",
@@ -484,7 +498,7 @@
             "text": "Operational status comments"
           }
         },
-        "_row_num": 34
+        "_row_num": 35
       },
       {
         "type": "note",
@@ -496,7 +510,7 @@
             "text": "This section is used to gather informatin about key commodities."
           }
         },
-        "_row_num": 36
+        "_row_num": 37
       },
       {
         "type": "linked_table",
@@ -512,7 +526,7 @@
             "text": "Add Key commodity"
           }
         },
-        "_row_num": 37
+        "_row_num": 38
       }
     ],
     "queries": [
@@ -524,11 +538,32 @@
         "_row_num": 2
       },
       {
-        "query_name": "regions_csv",
+        "query_name": "admin1_csv",
         "query_type": "csv",
-        "uri": "\"regions.csv\"",
-        "callback": "_.map(context, function(place){\nreturn { country: place.country, data_value: place.region, display: {title: {text: place.region} } };\n})",
+        "uri": "\"admin1.csv\"",
+        "callback": "_.map(context, function(place){\nreturn { country: place.country, data_value: place.admin1, display: {title: {text: place.admin1} } };\n})",
         "_row_num": 3
+      },
+      {
+        "query_name": "admin2_csv",
+        "query_type": "csv",
+        "uri": "\"admin2.csv\"",
+        "callback": "_.map(context, function(place){\nreturn { admin1: place.admin1, data_value: place.admin2, display: {title: {text: place.admin2} } };\n})",
+        "_row_num": 4
+      },
+      {
+        "query_name": "admin3_csv",
+        "query_type": "csv",
+        "uri": "\"admin3.csv\"",
+        "callback": "_.map(context, function(place){\nreturn { admin2: place.admin2, data_value: place.admin3, display: {title: {text: place.admin3} } };\n})",
+        "_row_num": 5
+      },
+      {
+        "query_name": "admin4_csv",
+        "query_type": "csv",
+        "uri": "\"admin4.csv\"",
+        "callback": "_.map(context, function(place){\nreturn { admin3: place.admin3, data_value: place.admin4, display: {title: {text: place.admin4} } };\n})",
+        "_row_num": 6
       },
       {
         "query_name": "key_commodity",
@@ -539,7 +574,7 @@
         "selectionArgs": "[data('Location_Name')]",
         "newRowInitialElementKeyToValueMap": "{ Location_Name : data('Location_Name')}",
         "openRowInitialElementKeyToValueMap": "{}",
-        "_row_num": 4
+        "_row_num": 7
       }
     ]
   },
@@ -861,12 +896,33 @@
         "callback": "_.chain(context).pluck('country').uniq().map(function(country){\nreturn {country:country,data_value: country, display: {title: {text:country} } };\n}).value()",
         "_row_num": 2
       },
-      "regions_csv": {
-        "query_name": "regions_csv",
+      "admin1_csv": {
+        "query_name": "admin1_csv",
         "query_type": "csv",
-        "uri": "\"regions.csv\"",
-        "callback": "_.map(context, function(place){\nreturn { country: place.country, data_value: place.region, display: {title: {text: place.region} } };\n})",
+        "uri": "\"admin1.csv\"",
+        "callback": "_.map(context, function(place){\nreturn { country: place.country, data_value: place.admin1, display: {title: {text: place.admin1} } };\n})",
         "_row_num": 3
+      },
+      "admin2_csv": {
+        "query_name": "admin2_csv",
+        "query_type": "csv",
+        "uri": "\"admin2.csv\"",
+        "callback": "_.map(context, function(place){\nreturn { admin1: place.admin1, data_value: place.admin2, display: {title: {text: place.admin2} } };\n})",
+        "_row_num": 4
+      },
+      "admin3_csv": {
+        "query_name": "admin3_csv",
+        "query_type": "csv",
+        "uri": "\"admin3.csv\"",
+        "callback": "_.map(context, function(place){\nreturn { admin2: place.admin2, data_value: place.admin3, display: {title: {text: place.admin3} } };\n})",
+        "_row_num": 5
+      },
+      "admin4_csv": {
+        "query_name": "admin4_csv",
+        "query_type": "csv",
+        "uri": "\"admin4.csv\"",
+        "callback": "_.map(context, function(place){\nreturn { admin3: place.admin3, data_value: place.admin4, display: {title: {text: place.admin4} } };\n})",
+        "_row_num": 6
       },
       "key_commodity": {
         "query_name": "key_commodity",
@@ -877,7 +933,7 @@
         "selectionArgs": "[data('Location_Name')]",
         "newRowInitialElementKeyToValueMap": "{ Location_Name : data('Location_Name')}",
         "openRowInitialElementKeyToValueMap": "{}",
-        "_row_num": 4
+        "_row_num": 7
       }
     },
     "calculates": {},
@@ -896,7 +952,7 @@
       "country": {
         "_defn": [
           {
-            "_row_num": 4,
+            "_row_num": 5,
             "section_name": "survey"
           }
         ],
@@ -904,18 +960,7 @@
         "valuesList": "countries_csv",
         "elementKey": "country"
       },
-      "region": {
-        "_defn": [
-          {
-            "_row_num": 5,
-            "section_name": "survey"
-          }
-        ],
-        "type": "string",
-        "valuesList": "regions_csv",
-        "elementKey": "region"
-      },
-      "province": {
+      "admin1": {
         "_defn": [
           {
             "_row_num": 6,
@@ -923,9 +968,10 @@
           }
         ],
         "type": "string",
-        "elementKey": "province"
+        "valuesList": "admin1_csv",
+        "elementKey": "admin1"
       },
-      "municipality_district": {
+      "admin2": {
         "_defn": [
           {
             "_row_num": 7,
@@ -933,9 +979,10 @@
           }
         ],
         "type": "string",
-        "elementKey": "municipality_district"
+        "valuesList": "admin2_csv",
+        "elementKey": "admin2"
       },
-      "barangay_village": {
+      "admin3": {
         "_defn": [
           {
             "_row_num": 8,
@@ -943,12 +990,24 @@
           }
         ],
         "type": "string",
-        "elementKey": "barangay_village"
+        "valuesList": "admin3_csv",
+        "elementKey": "admin3"
+      },
+      "admin4": {
+        "_defn": [
+          {
+            "_row_num": 9,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "admin4_csv",
+        "elementKey": "admin4"
       },
       "Location": {
         "_defn": [
           {
-            "_row_num": 12,
+            "_row_num": 13,
             "section_name": "survey"
           }
         ],
@@ -977,7 +1036,7 @@
       "Location_Type": {
         "_defn": [
           {
-            "_row_num": 16,
+            "_row_num": 17,
             "section_name": "survey"
           }
         ],
@@ -988,7 +1047,7 @@
       "Financial_Location_Type": {
         "_defn": [
           {
-            "_row_num": 18,
+            "_row_num": 19,
             "section_name": "survey"
           }
         ],
@@ -999,7 +1058,7 @@
       "Market_Location_Type": {
         "_defn": [
           {
-            "_row_num": 21,
+            "_row_num": 22,
             "section_name": "survey"
           }
         ],
@@ -1010,7 +1069,7 @@
       "Location_Name": {
         "_defn": [
           {
-            "_row_num": 24,
+            "_row_num": 25,
             "section_name": "survey"
           }
         ],
@@ -1020,7 +1079,7 @@
       "Location_Picture": {
         "_defn": [
           {
-            "_row_num": 25,
+            "_row_num": 26,
             "section_name": "survey"
           }
         ],
@@ -1044,7 +1103,7 @@
       "Operational_Status": {
         "_defn": [
           {
-            "_row_num": 27,
+            "_row_num": 28,
             "section_name": "survey"
           }
         ],
@@ -1061,11 +1120,11 @@
         "valuesList": "operational_barriers",
         "_defn": [
           {
-            "_row_num": 29,
+            "_row_num": 30,
             "section_name": "survey"
           },
           {
-            "_row_num": 32,
+            "_row_num": 33,
             "section_name": "survey"
           }
         ],
@@ -1074,7 +1133,7 @@
       "Operation_Status_Comment": {
         "_defn": [
           {
-            "_row_num": 34,
+            "_row_num": 35,
             "section_name": "survey"
           }
         ],
@@ -1120,8 +1179,8 @@
                 "text": "Select Country"
               }
             },
-            "_row_num": 4,
-            "__rowNum__": 3,
+            "_row_num": 5,
+            "__rowNum__": 4,
             "_token_type": "prompt",
             "_type": "select_one_dropdown",
             "_branch_label_enclosing_screen": "survey/_screen4",
@@ -1129,64 +1188,70 @@
           },
           {
             "type": "select_one_dropdown",
-            "values_list": "regions_csv",
-            "name": "region",
+            "values_list": "admin1_csv",
+            "name": "admin1",
             "display": {
               "prompt": {
-                "text": "Select Region/State"
+                "text": "Select Region/State (Admin 1)"
               }
             },
             "choice_filter": "choice_item.country === data('country')",
-            "_row_num": 5,
-            "__rowNum__": 4,
-            "_token_type": "prompt",
-            "_type": "select_one_dropdown",
-            "_branch_label_enclosing_screen": "survey/_screen5",
-            "promptIdx": 2
-          },
-          {
-            "type": "text",
-            "name": "province",
-            "display": {
-              "prompt": {
-                "text": "Enter province"
-              }
-            },
             "_row_num": 6,
             "__rowNum__": 5,
             "_token_type": "prompt",
-            "_type": "text",
-            "_branch_label_enclosing_screen": "survey/_screen6",
-            "promptIdx": 3
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen4",
+            "promptIdx": 2
           },
           {
-            "type": "text",
-            "name": "municipality_district",
+            "type": "select_one_dropdown",
+            "values_list": "admin2_csv",
+            "name": "admin2",
             "display": {
               "prompt": {
-                "text": "Enter Muncipality/District"
+                "text": "Enter Province/City/Town (Admin 2)"
               }
             },
+            "choice_filter": "choice_item.admin1 === data('admin1')",
             "_row_num": 7,
             "__rowNum__": 6,
             "_token_type": "prompt",
-            "_type": "text",
-            "_branch_label_enclosing_screen": "survey/_screen7",
-            "promptIdx": 4
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen4",
+            "promptIdx": 3
           },
           {
-            "type": "text",
-            "name": "barangay_village",
+            "type": "select_one_dropdown",
+            "values_list": "admin3_csv",
+            "name": "admin3",
             "display": {
               "prompt": {
-                "text": "Enter Barangay/Village"
+                "text": "Enter Muncipality/District/County (Admin 3)"
               }
             },
+            "choice_filter": "choice_item.admin2 === data('admin2')",
             "_row_num": 8,
             "__rowNum__": 7,
             "_token_type": "prompt",
-            "_type": "text",
-            "_branch_label_enclosing_screen": "survey/_screen8",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen4",
+            "promptIdx": 4
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "admin4_csv",
+            "name": "admin4",
+            "display": {
+              "prompt": {
+                "text": "Enter Barangay/Village/Street (Admin 4)"
+              }
+            },
+            "choice_filter": "choice_item.admin3 === data('admin3')",
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen4",
             "promptIdx": 5
           },
           {
@@ -1203,11 +1268,11 @@
                 "text": "Capture the GPS cordinates of this location"
               }
             },
-            "_row_num": 12,
-            "__rowNum__": 11,
+            "_row_num": 13,
+            "__rowNum__": 12,
             "_token_type": "prompt",
             "_type": "geopoint",
-            "_branch_label_enclosing_screen": "survey/_screen12",
+            "_branch_label_enclosing_screen": "survey/_screen13",
             "promptIdx": 6
           },
           {
@@ -1222,11 +1287,11 @@
                 "text": "Select one location type"
               }
             },
-            "_row_num": 16,
-            "__rowNum__": 15,
+            "_row_num": 17,
+            "__rowNum__": 16,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen13",
+            "_branch_label_enclosing_screen": "survey/_screen14",
             "promptIdx": 7
           },
           {
@@ -1238,11 +1303,11 @@
                 "text": "Financial Institution"
               }
             },
-            "_row_num": 18,
-            "__rowNum__": 17,
+            "_row_num": 19,
+            "__rowNum__": 18,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen13",
+            "_branch_label_enclosing_screen": "survey/_screen14",
             "promptIdx": 8
           },
           {
@@ -1254,11 +1319,11 @@
                 "text": "Market / Shop"
               }
             },
-            "_row_num": 21,
-            "__rowNum__": 20,
+            "_row_num": 22,
+            "__rowNum__": 21,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen13",
+            "_branch_label_enclosing_screen": "survey/_screen14",
             "promptIdx": 9
           },
           {
@@ -1269,11 +1334,11 @@
                 "text": "Location Name"
               }
             },
-            "_row_num": 24,
-            "__rowNum__": 23,
+            "_row_num": 25,
+            "__rowNum__": 24,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "survey/_screen24",
+            "_branch_label_enclosing_screen": "survey/_screen25",
             "promptIdx": 10
           },
           {
@@ -1287,11 +1352,11 @@
                 "text": "Please be sure to ask for permission before taking pictures."
               }
             },
-            "_row_num": 25,
-            "__rowNum__": 24,
+            "_row_num": 26,
+            "__rowNum__": 25,
             "_token_type": "prompt",
             "_type": "image",
-            "_branch_label_enclosing_screen": "survey/_screen25",
+            "_branch_label_enclosing_screen": "survey/_screen26",
             "promptIdx": 11
           },
           {
@@ -1303,11 +1368,11 @@
                 "text": "Operational status"
               }
             },
-            "_row_num": 27,
-            "__rowNum__": 26,
+            "_row_num": 28,
+            "__rowNum__": 27,
             "_token_type": "prompt",
             "_type": "select_one",
-            "_branch_label_enclosing_screen": "survey/_screen27",
+            "_branch_label_enclosing_screen": "survey/_screen28",
             "promptIdx": 12
           },
           {
@@ -1322,11 +1387,11 @@
                 "text": "Select all that apply. Please be sure to ask store owner for their answers , do not answers this question based on your assumptions and /or observations."
               }
             },
-            "_row_num": 29,
-            "__rowNum__": 28,
+            "_row_num": 30,
+            "__rowNum__": 29,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "survey/_screen29",
+            "_branch_label_enclosing_screen": "survey/_screen30",
             "promptIdx": 13
           },
           {
@@ -1338,11 +1403,11 @@
                 "text": "Operational Barriers"
               }
             },
-            "_row_num": 32,
-            "__rowNum__": 31,
+            "_row_num": 33,
+            "__rowNum__": 32,
             "_token_type": "prompt",
             "_type": "select_multiple",
-            "_branch_label_enclosing_screen": "survey/_screen32",
+            "_branch_label_enclosing_screen": "survey/_screen33",
             "promptIdx": 14
           },
           {
@@ -1353,11 +1418,11 @@
                 "text": "Operational status comments"
               }
             },
-            "_row_num": 34,
-            "__rowNum__": 33,
+            "_row_num": 35,
+            "__rowNum__": 34,
             "_token_type": "prompt",
             "_type": "text",
-            "_branch_label_enclosing_screen": "survey/_screen34",
+            "_branch_label_enclosing_screen": "survey/_screen35",
             "promptIdx": 15
           },
           {
@@ -1370,11 +1435,11 @@
                 "text": "This section is used to gather informatin about key commodities."
               }
             },
-            "_row_num": 36,
-            "__rowNum__": 35,
+            "_row_num": 37,
+            "__rowNum__": 36,
             "_token_type": "prompt",
             "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen36",
+            "_branch_label_enclosing_screen": "survey/_screen37",
             "promptIdx": 16
           },
           {
@@ -1391,19 +1456,19 @@
                 "text": "Add Key commodity"
               }
             },
-            "_row_num": 37,
-            "__rowNum__": 36,
+            "_row_num": 38,
+            "__rowNum__": 37,
             "_token_type": "prompt",
             "_type": "linked_table",
-            "_branch_label_enclosing_screen": "survey/_screen37",
+            "_branch_label_enclosing_screen": "survey/_screen38",
             "promptIdx": 17
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 38,
-            "_branch_label_enclosing_screen": "survey/_screen38",
+            "_row_num": 39,
+            "_branch_label_enclosing_screen": "survey/_screen39",
             "promptIdx": 18
           }
         ],
@@ -1420,196 +1485,176 @@
             "operationIdx": 0
           },
           {
-            "_row_num": 4,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 1
-          },
-          {
-            "_row_num": 5,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 2
-          },
-          {
-            "_row_num": 6,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 3
-          },
-          {
-            "_row_num": 7,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 4
-          },
-          {
-            "_row_num": 8,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(5);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 5
-          },
-          {
-            "_row_num": 12,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 6
-          },
-          {
             "clause": "begin screen",
-            "_row_num": 13,
-            "__rowNum__": 12,
+            "_row_num": 4,
+            "__rowNum__": 3,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 23,
-              "__rowNum__": 22,
+              "_row_num": 10,
+              "__rowNum__": 9,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 13,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 2
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 24,
+              "__rowNum__": 23,
               "_token_type": "end_screen"
             },
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\nif (selected(data('Location_Type'), 'financial_intitution')) {\nactivePromptIndicies.push(8);\n}\nif (selected(data('Location_Type'), 'market_shop')) {\nactivePromptIndicies.push(9);\n}\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 7
-          },
-          {
-            "_row_num": 24,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 8
+            "operationIdx": 3
           },
           {
             "_row_num": 25,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 9
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 4
           },
           {
-            "_row_num": 27,
+            "_row_num": 26,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 5
+          },
+          {
+            "_row_num": 28,
             "_token_type": "begin_screen",
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(12);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 10
+            "operationIdx": 6
           },
           {
             "clause": "if",
             "condition": "selected(data('Operational_Status'), 'partially_functioning')",
-            "_row_num": 28,
-            "__rowNum__": 27,
+            "_row_num": 29,
+            "__rowNum__": 28,
             "_token_type": "goto_label",
-            "_branch_label": "_then28",
+            "_branch_label": "_then29",
+            "operationIdx": 7
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else31",
+            "_row_num": 31,
+            "operationIdx": 8
+          },
+          {
+            "_row_num": 30,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 9
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif31",
+            "_row_num": 31,
+            "operationIdx": 10
+          },
+          {
+            "clause": "if",
+            "condition": "selected(data('Operational_Status'), 'not_functioning')",
+            "_row_num": 32,
+            "__rowNum__": 31,
+            "_token_type": "goto_label",
+            "_branch_label": "_then32",
             "operationIdx": 11
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_else30",
-            "_row_num": 30,
+            "_branch_label": "_else34",
+            "_row_num": 34,
             "operationIdx": 12
           },
           {
-            "_row_num": 29,
+            "_row_num": 33,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(14);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 13
           },
           {
             "clause": "end if",
             "_token_type": "goto_label",
-            "_branch_label": "_endif30",
-            "_row_num": 30,
+            "_branch_label": "_endif34",
+            "_row_num": 34,
             "operationIdx": 14
           },
           {
-            "clause": "if",
-            "condition": "selected(data('Operational_Status'), 'not_functioning')",
-            "_row_num": 31,
-            "__rowNum__": 30,
-            "_token_type": "goto_label",
-            "_branch_label": "_then31",
-            "operationIdx": 15
-          },
-          {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_else33",
-            "_row_num": 33,
-            "operationIdx": 16
-          },
-          {
-            "_row_num": 32,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(14);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 17
-          },
-          {
-            "clause": "end if",
-            "_token_type": "goto_label",
-            "_branch_label": "_endif33",
-            "_row_num": 33,
-            "operationIdx": 18
-          },
-          {
-            "_row_num": 34,
+            "_row_num": 35,
             "_token_type": "begin_screen",
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 19
-          },
-          {
-            "_row_num": 36,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 20
+            "operationIdx": 15
           },
           {
             "_row_num": 37,
             "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 16
+          },
+          {
+            "_row_num": 38,
+            "_token_type": "begin_screen",
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(17);\n\nreturn activePromptIndicies;\n}\n",
-            "operationIdx": 21
+            "operationIdx": 17
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 38,
-            "operationIdx": 22
+            "_row_num": 39,
+            "operationIdx": 18
           },
           {
-            "_row_num": 38,
+            "_row_num": 39,
             "_token_type": "begin_screen",
             "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(18);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 23
+            "operationIdx": 19
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 38,
-            "operationIdx": 24
+            "_row_num": 39,
+            "operationIdx": 20
           }
         ],
         "branch_label_map": {
           "_screen2": 0,
           "_screen4": 1,
-          "_screen5": 2,
-          "_screen6": 3,
-          "_screen7": 4,
-          "_screen8": 5,
-          "_screen12": 6,
-          "_screen13": 7,
-          "_screen24": 8,
-          "_screen25": 9,
-          "_screen27": 10,
-          "_then28": 13,
-          "_screen29": 13,
-          "_else30": 15,
-          "_endif30": 15,
-          "_then31": 17,
-          "_screen32": 17,
-          "_else33": 19,
-          "_endif33": 19,
-          "_screen34": 19,
-          "_screen36": 20,
-          "_screen37": 21,
-          "_contents": 23,
-          "_screen38": 23
+          "_screen13": 2,
+          "_screen14": 3,
+          "_screen25": 4,
+          "_screen26": 5,
+          "_screen28": 6,
+          "_then29": 9,
+          "_screen30": 9,
+          "_else31": 11,
+          "_endif31": 11,
+          "_then32": 13,
+          "_screen33": 13,
+          "_else34": 15,
+          "_endif34": 15,
+          "_screen35": 15,
+          "_screen37": 16,
+          "_screen38": 17,
+          "_contents": 19,
+          "_screen39": 19
         }
       },
       "initial": {
@@ -1808,7 +1853,7 @@
       "country": {
         "_defn": [
           {
-            "_row_num": 4,
+            "_row_num": 5,
             "section_name": "survey"
           }
         ],
@@ -1819,21 +1864,7 @@
         "elementSet": "data",
         "elementPath": "country"
       },
-      "region": {
-        "_defn": [
-          {
-            "_row_num": 5,
-            "section_name": "survey"
-          }
-        ],
-        "type": "string",
-        "valuesList": "regions_csv",
-        "elementKey": "region",
-        "elementName": "region",
-        "elementSet": "data",
-        "elementPath": "region"
-      },
-      "province": {
+      "admin1": {
         "_defn": [
           {
             "_row_num": 6,
@@ -1841,12 +1872,13 @@
           }
         ],
         "type": "string",
-        "elementKey": "province",
-        "elementName": "province",
+        "valuesList": "admin1_csv",
+        "elementKey": "admin1",
+        "elementName": "admin1",
         "elementSet": "data",
-        "elementPath": "province"
+        "elementPath": "admin1"
       },
-      "municipality_district": {
+      "admin2": {
         "_defn": [
           {
             "_row_num": 7,
@@ -1854,12 +1886,13 @@
           }
         ],
         "type": "string",
-        "elementKey": "municipality_district",
-        "elementName": "municipality_district",
+        "valuesList": "admin2_csv",
+        "elementKey": "admin2",
+        "elementName": "admin2",
         "elementSet": "data",
-        "elementPath": "municipality_district"
+        "elementPath": "admin2"
       },
-      "barangay_village": {
+      "admin3": {
         "_defn": [
           {
             "_row_num": 8,
@@ -1867,15 +1900,30 @@
           }
         ],
         "type": "string",
-        "elementKey": "barangay_village",
-        "elementName": "barangay_village",
+        "valuesList": "admin3_csv",
+        "elementKey": "admin3",
+        "elementName": "admin3",
         "elementSet": "data",
-        "elementPath": "barangay_village"
+        "elementPath": "admin3"
+      },
+      "admin4": {
+        "_defn": [
+          {
+            "_row_num": 9,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "admin4_csv",
+        "elementKey": "admin4",
+        "elementName": "admin4",
+        "elementSet": "data",
+        "elementPath": "admin4"
       },
       "Location": {
         "_defn": [
           {
-            "_row_num": 12,
+            "_row_num": 13,
             "section_name": "survey"
           }
         ],
@@ -1926,7 +1974,7 @@
       "Location_Type": {
         "_defn": [
           {
-            "_row_num": 16,
+            "_row_num": 17,
             "section_name": "survey"
           }
         ],
@@ -1940,7 +1988,7 @@
       "Financial_Location_Type": {
         "_defn": [
           {
-            "_row_num": 18,
+            "_row_num": 19,
             "section_name": "survey"
           }
         ],
@@ -1954,7 +2002,7 @@
       "Market_Location_Type": {
         "_defn": [
           {
-            "_row_num": 21,
+            "_row_num": 22,
             "section_name": "survey"
           }
         ],
@@ -1968,7 +2016,7 @@
       "Location_Name": {
         "_defn": [
           {
-            "_row_num": 24,
+            "_row_num": 25,
             "section_name": "survey"
           }
         ],
@@ -1981,7 +2029,7 @@
       "Location_Picture": {
         "_defn": [
           {
-            "_row_num": 25,
+            "_row_num": 26,
             "section_name": "survey"
           }
         ],
@@ -2019,7 +2067,7 @@
       "Operational_Status": {
         "_defn": [
           {
-            "_row_num": 27,
+            "_row_num": 28,
             "section_name": "survey"
           }
         ],
@@ -2043,11 +2091,11 @@
         "valuesList": "operational_barriers",
         "_defn": [
           {
-            "_row_num": 29,
+            "_row_num": 30,
             "section_name": "survey"
           },
           {
-            "_row_num": 32,
+            "_row_num": 33,
             "section_name": "survey"
           }
         ],
@@ -2062,7 +2110,7 @@
       "Operation_Status_Comment": {
         "_defn": [
           {
-            "_row_num": 34,
+            "_row_num": 35,
             "section_name": "survey"
           }
         ],
