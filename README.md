@@ -15,10 +15,15 @@ Note: If you want to reset (delete all existing applications and data) your **Op
 
 
 ## Installation
+#### Clone `arc_fima` and `arc_fima_commodity` inside your `path/app-designer/app/config/tables/` directory of your **ODK Application Designer**
+```
+cd `path/app-designer/app/config/tables/`
+git clone https://github.com/AmericanRedCross/fima.git .
+```
 
 
 ## Required CSV Files
-- countries.csv (List of countries)
+- countries.csv (country)
 - admin1.csv (region/state)
 - admin2.csv (province/city/town)
 - admin3.csv (municipality/county)
