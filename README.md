@@ -9,18 +9,18 @@ FIMA is the data management application on top of ODK 2 framework. This applicat
 - [ODK Services](https://docs.opendatakit.org/odk2/services-intro/) (Android Application)
 - [ODK Tables](https://docs.opendatakit.org/odk2/tables-intro/) (Android Application)
 - [ODK Application Designer](https://docs.opendatakit.org/odk2/tables-intro/) (Web Application)
-- Setup Devlopment Environment: [Java, NodeJs, Grunt and Adnroid SDK](https://docs.opendatakit.org/odk2/app-designer-setup/) 
+- Setup Development Environment: [Java, NodeJs, Grunt and Adnroid SDK](https://docs.opendatakit.org/odk2/app-designer-setup/) 
 
 Note: If you want to reset (delete all existing applications and data) your **Open Data Kit 2.0 Server (cloud service)**, You need [ODK Suitcase](https://docs.opendatakit.org/odk2/suitcase-install/).
 
 
 ## Installation
-#### Clone `arc_fima` and `arc_fima_commodity` inside your `.../app/config/tables/` directory of your **ODK Application Designer** application.
+- Clone `arc_fima` and `arc_fima_commodity` inside your `.../app/config/tables/` directory of your **ODK Application Designer** application.
 ```
 cd path/app-designer/app/config/tables/
 git clone https://github.com/AmericanRedCross/fima.git .
 ```
-
+- Navigate to the root of your **ODK Application Designer** directory and run the `grunt` command to launch the ODK Application Designer on your chrome browser.
 
 ## Required CSV Files
 - countries.csv (country)
