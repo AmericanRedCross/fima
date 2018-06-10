@@ -29,7 +29,6 @@ git clone https://github.com/AmericanRedCross/fima.git .
 - admin3.csv (municipality/county)
 - admin4.csv (barangay/village/street)
 
-### Creating CSVs
 #### countries.csv
 ```
 CSV detail
