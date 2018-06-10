@@ -11,6 +11,12 @@ FIMA is the data management application on top of ODK 2 framework. This applicat
 - ODK Application Designer (Web App)
 - Android developmet environment, basically Android Debug Bridge (adb) required
 
+Note: If you want to reset(delete all existing applications and data) your **Open Data Kit 2.0 Server (cloud service)**, You need ODK Suitcase-*.*.jar.
+Running JAR file
+```
+java -jar ODK-Suitcase.jar
+```
+
 ## Installation
 
 
