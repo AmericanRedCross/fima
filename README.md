@@ -20,7 +20,7 @@ Note: If you want to reset (delete all existing applications and data) your **Op
 cd path/app-designer/app/config/tables/
 git clone https://github.com/AmericanRedCross/fima.git .
 ```
-- Navigate to the root of your **ODK Application Designer** directory and run the `grunt` command to launch the ODK Application Designer on your chrome browser.
+- Navigate to the root of your **ODK Application Designer** directory and run the `grunt` command to launch the ODK Application Designer on your chrome browser to test the application (FIMA).
 
 ## Required CSV Files
 - countries.csv (country)
