@@ -6,16 +6,13 @@ FIMA is the data management application on top of ODK 2 framework. This applicat
 
 ## Prerequisites
 - Open Data Kit 2.0 Server (cloud service)
-- ODK Services (Android Application)
-- ODK Tables (Android Application)
-- ODK Application Designer (Web App)
-- Android developmet environment, basically Android Debug Bridge (adb) required
+- [ODK Services](https://docs.opendatakit.org/odk2/services-intro/) (Android Application)
+- [ODK Tables](https://docs.opendatakit.org/odk2/tables-intro/) (Android Application)
+- [ODK Application Designer](https://docs.opendatakit.org/odk2/tables-intro/) (Web Application)
+- Setup Devlopment Environment: [Java, NodeJs, Grunt and Adnroid SDK](https://docs.opendatakit.org/odk2/app-designer-setup/) 
 
-Note: If you want to reset(delete all existing applications and data) your **Open Data Kit 2.0 Server (cloud service)**, You need ODK Suitcase-*.*.jar.
-Running JAR file
-```
-java -jar ODK-Suitcase.jar
-```
+Note: If you want to reset (delete all existing applications and data) your **Open Data Kit 2.0 Server (cloud service)**, You need [ODK Suitcase.jar](https://docs.opendatakit.org/odk2/suitcase-install/).
+
 
 ## Installation
 
