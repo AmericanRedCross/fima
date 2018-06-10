@@ -15,22 +15,37 @@ FIMA is the data management application on top of ODK 2 framework. This applicat
 
 
 ## Required CSV Files
-- countries.csv
-- admin1.csv
-- admin2.csv
-- admin3.csv
-- admin4.csv
+- countries.csv (List of countries)
+- admin1.csv (region/state)
+- admin2.csv (province/city/town)
+- admin3.csv (municipality/county)
+- admin4.csv (barangay/village/street)
 
 ### Creating CSVs
 #### countries.csv
+```
+CSV detail
+```
 
 #### admin1.csv
+```
+CSV detail
+```
 
 #### admin2.csv
+```
+CSV detail
+```
 
 #### admin3.csv
+```
+CSV detail
+```
 
 #### admin4.csv 
+```
+CSV detail
+```
 
 
 
