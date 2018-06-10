@@ -14,7 +14,23 @@ FIMA is the data management application on top of ODK 2 framework. This applicat
 ## Installation
 
 
-## Required Excel sheets 
+## Required CSV Files
+- countries.csv
+- admin1.csv
+- admin2.csv
+- admin3.csv
+- admin4.csv
+
+### Creating CSVs
+#### countries.csv
+
+#### admin1.csv
+
+#### admin2.csv
+
+#### admin3.csv
+
+#### admin4.csv 
 
 
 
