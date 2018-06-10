@@ -15,9 +15,9 @@ Note: If you want to reset (delete all existing applications and data) your **Op
 
 
 ## Installation
-#### Clone `arc_fima` and `arc_fima_commodity` inside your `path/app-designer/app/config/tables/` directory of your **ODK Application Designer**
+#### Clone `arc_fima` and `arc_fima_commodity` inside your `.../app/config/tables/` directory of your **ODK Application Designer** application.
 ```
-cd `path/app-designer/app/config/tables/`
+cd path/app-designer/app/config/tables/
 git clone https://github.com/AmericanRedCross/fima.git .
 ```
 
