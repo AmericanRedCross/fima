@@ -30,30 +30,19 @@ git clone https://github.com/AmericanRedCross/fima.git .
 - admin4.csv (barangay/village/street)
 
 #### countries.csv
-```
-CSV detail
-```
+Countries CSV file will contain list of the contries where the FIMA app will be deployed.
 
 #### admin1.csv
-```
-CSV detail
-```
+admin1.csv will contain first degree of the administrative region of any countries listed on the countries.csv
 
-#### admin2.csv
-```
-CSV detail
-```
+Similarly, **admin2**, **admin3** and **admin4** CSV files will contain lower degree of administrative regions. 
+**NOTE:** See the sample CSV files and maintain the same heading (title) of each columns of the CSV files(`fima/arc_fima/forms/arc_fima/*.csv`)
 
-#### admin3.csv
-```
-CSV detail
-```
+## Deployement
 
-#### admin4.csv 
-```
-CSV detail
-```
+### Install APP on Android
 
+### Sync APP with ODK2-Server
 
 
 
