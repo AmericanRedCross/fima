@@ -40,9 +40,9 @@ Similarly, **admin2**, **admin3** and **admin4** CSV files will contain lower de
 
 ## Deployement
 
-### Install APP on Android
+### Install APP on Android Device
 
-### Sync APP with ODK2-Server
+### Upload APP to the ODK2-Server
 
 
 
