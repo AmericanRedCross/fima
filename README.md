@@ -15,12 +15,24 @@ Note: If you want to reset (delete all existing applications and data) your **Op
 
 
 ## Installation
-- Clone `assets` and `tables` inside your `.../app/config/` directory of your **ODK Application Designer** application.
+- Delete all files and folder inside your `/app-designer/app/config/` directory.
+- Clone `assets` and `tables` inside your `/app-designer/app/config/` directory of your **ODK Application Designer** application.
 ```
 cd path/app-designer/app/config/
 git clone https://github.com/AmericanRedCross/fima.git .
 ```
 - Navigate to the root of your **ODK Application Designer** directory and run the `grunt` command to launch the ODK Application Designer on your chrome browser to test the application (FIMA).
+
+Once everything tested and looks okay
+
+### Push the APP to Android Device
+```
+grunt adbpush
+```
+
+### Upload APP to the ODK2-Server
+- configure ODK Services app on your android device with admin user for the ODK Cloud endpoints (ODK server)
+- Sync the app with ODK server to upload the app to the server so that any other ODK Table and ODK Survey apps can work with the ODK Server using same FIMA app.
 
 ## Required CSV Files
 - countries.csv (country)
@@ -37,16 +49,3 @@ admin1.csv will contain first degree of the administrative region of any countri
 
 Similarly, **admin2**, **admin3** and **admin4** CSV files will contain lower degree of administrative regions. 
 **NOTE:** See the sample CSV files and maintain the same heading (title) of each columns of the CSV files(`fima/arc_fima/forms/arc_fima/*.csv`)
-
-## Deployement
-
-### Install APP on Android Device
-
-### Upload APP to the ODK2-Server
-
-
-
-## Documnetation in Progress
-
-#### App UI and Templating is under development. The core form and data endpoints have been created.
-
