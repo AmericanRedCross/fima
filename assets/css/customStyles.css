@@ -1,0 +1,113 @@
+﻿/* Sets background color throughout the form and text color throughout the form */
+.odk-container, .odk-screen, .odk-scroll, .ui-page, .ui-li, .ui-page  {
+	color: hsv(0, 67%, 84%);
+	background: hsv(0, 2%, 97%); 
+	text-shadow: 0 /*{d-body-shadow-x}*/ 1px /*{d-body-shadow-y}*/ 0 /*{d-body-shadow-radius}*/ hsv(0, 2%, 97%) /*{d-body-shadow-color}*/;
+  
+}
+/* Sets question text color and size */
+.odk-label {
+	color: hsv(0, 67%, 84%);
+    font-size: large;
+}
+
+/* Sets hint text font color, size, and italic */
+.odk-hint {
+	color: hsv(0, 67%, 84%);
+	font-size: 95%;
+    font-style: italic;
+}
+
+/********************* Navbar styles */  /* out of date ***************************************/
+.odk-header{
+	border:1px solid #f0f0f0;
+	background-image: -webkit-linear-gradient(#f0f0f0, #d0d0d0);
+	color:#333;
+	font-weight:bold;
+	font-family:inherit;
+}
+.odk-options-btn .ui-link, .odk-prev-btn, .odk-next-btn {
+	background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
+	font-weight:bold;
+	color:#333;
+}
+
+.odk-options-btn .ui-link:hover, .odk-prev-btn:hover, .odk-next-btn:hover {
+	background-image: -webkit-linear-gradient(#f0f0f0, #e0e0e0);
+	font-weight:bold;
+	color:#333;
+}
+/********************* End Navbar Styles ***************************************/
+
+
+
+
+/************ other buttons settings *********/
+.ui-btn-up-d, .ui-btn-down-d {
+	border:1px solid {{other-button-border-color}}; 
+	font-weight:bold; color: #333; 
+}
+.ui-btn-up-d {
+	background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
+}
+.ui-btn-down-d {
+	background-image: -webkit-linear-gradient({{other-button-selected-color-start}},{{other-button-selected-color-end}});
+}
+/******** End other buttons settings *********/
+
+/************* Select Button Settings ************************/
+.ui-radio-off, .ui-checkbox-off {
+	border:1px solid #bbb !important;
+	background-image:-webkit-linear-gradient(#fafafa, #eaeaea);
+	font-weight:bold;
+	color: #333 !important;
+	text-shadow: 0 1px 0 #fafafa !important;
+}
+.ui-checkbox-on, .ui-radio-on {
+	border:1px solid #bbb !important;
+	background-image:-webkit-linear-gradient(#fafafa, #eaeaea);
+	font-weight:bold;
+	color: #333 !important;
+	text-shadow: 0 1px 0 #fafafa !important;
+}
+
+/******* end select button setttings *******/
+
+/******* fixes the zebra coloring on the main page *******/
+.instanceList.layout-zebra .ui-li-static {
+	background-image : -webkit-linear-gradient(hsv(0, 2%, 97%), hsv(0, 2%, 97%)) !important;
+	color: hsv(0, 67%, 84%) !important;
+	text-shadow: 0 1px 0 hsv(0, 2%, 97%) !important;
+}
+.instanceList.layout-zebra li:nth-child(even) {
+	background-image : -webkit-linear-gradient(hsv(0, 2%, 97%), hsv(0, 2%, 97%)) !important;
+}
+/********* end Zebra coloring *********/
+
+
+/******** Corner Rounding ***************/
+
+/* Corner Rounding for vertical lists */
+.ui-corner-all {
+	-webkit-border-radius:  13px; 
+	border-radius: 13px;
+}
+
+/*  Corner rounding for horizontal lists */
+.ui-controlgroup-horizontal {
+	-webkit-border-radius:  13px; 
+	border-radius: 13px;
+}
+
+/* Corner Rounding for text input boxes */
+.ui-input-text {
+	-webkit-border-radius:  .6em; /*{global-radii-blocks}*/
+	border-radius: .6em; /*{global-radii-blocks}*/
+}
+/************ End Corner Rounding ************/
+
+/*--------------*/
+
+
+
+
