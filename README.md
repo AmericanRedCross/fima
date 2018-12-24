@@ -16,7 +16,7 @@ Note: If you want to reset (delete all existing applications and data) your **Op
 
 ## Installation
 - Delete all files and folder inside your `/app-designer/app/config/` directory.
-- Clone `assets` and `tables` inside your `/app-designer/app/config/` directory of your **ODK Application Designer** application.
+- Clone/Download FIMA git contents (`assets` and `tables`) inside your `/app-designer/app/config/` directory of your **ODK Application Designer** application.
 ```
 cd path/app-designer/app/config/
 git clone https://github.com/AmericanRedCross/fima.git .
