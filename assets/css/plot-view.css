@@ -1,10 +1,14 @@
+/* modified list css*/
+
 html {
   height: 100%;
   width: 100%;
+  background-color: #004756;
 }
 
 body {
   font-family: arial;
+  color: #FFFFFF;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -16,6 +20,7 @@ h1 {
 } 
 
 #wrapper { 
+  background: #004756;
   overflow: auto;
 }
 
@@ -45,7 +50,7 @@ ul {
 
 .detail {
   font-size: 16pt;
-  color: #E14B4B;
+  color: #FFFFFF;
   font-weight: normal;
 }
  
@@ -60,7 +65,7 @@ ul {
 .divider {
   margin-left: auto;
   margin-right: auto;
-  background-color: #38c0f4; 
+  background-color: lightblue; 
   width: 95%;
   height: 10px;
 }

@@ -1,27 +1,27 @@
 ﻿/* Sets background color throughout the form and text color throughout the form */
 .odk-container, .odk-screen, .odk-scroll, .ui-page, .ui-li, .ui-page  {
-	color: hsv(0, 67%, 84%);
-	background: hsv(0, 2%, 97%); 
-	text-shadow: 0 /*{d-body-shadow-x}*/ 1px /*{d-body-shadow-y}*/ 0 /*{d-body-shadow-radius}*/ hsv(0, 2%, 97%) /*{d-body-shadow-color}*/;
+	color: hsv(0, 66%, 92%);
+	background: white; 
+	text-shadow: 0 /*{d-body-shadow-x}*/ 1px /*{d-body-shadow-y}*/ 0 /*{d-body-shadow-radius}*/ #f5f5f5 /*{d-body-shadow-color}*/;
   
 }
 /* Sets question text color and size */
 .odk-label {
-	color: hsv(0, 67%, 84%);
+	color: hsv(0, 66%, 92%);
     font-size: large;
 }
 
 /* Sets hint text font color, size, and italic */
 .odk-hint {
-	color: hsv(0, 67%, 84%);
+	color: hsv(0, 66%, 92%);
 	font-size: 95%;
     font-style: italic;
 }
 
 /********************* Navbar styles */  /* out of date ***************************************/
 .odk-header{
-	border:1px solid #f0f0f0;
-	background-image: -webkit-linear-gradient(#f0f0f0, #d0d0d0);
+	border:1px solid hsv(0, 0%, 94%);
+	background-image: -webkit-linear-gradient(hsv(0, 0%, 94%), hsv(0, 0%, 94%));
 	color:#333;
 	font-weight:bold;
 	font-family:inherit;
@@ -60,14 +60,14 @@
 	border:1px solid #bbb !important;
 	background-image:-webkit-linear-gradient(#fafafa, #eaeaea);
 	font-weight:bold;
-	color: #333 !important;
+	color: hsv(0, 60%, 91%) !important;
 	text-shadow: 0 1px 0 #fafafa !important;
 }
 .ui-checkbox-on, .ui-radio-on {
 	border:1px solid #bbb !important;
 	background-image:-webkit-linear-gradient(#fafafa, #eaeaea);
 	font-weight:bold;
-	color: #333 !important;
+	color: hsv(0, 60%, 91%) !important;
 	text-shadow: 0 1px 0 #fafafa !important;
 }
 
@@ -75,12 +75,12 @@
 
 /******* fixes the zebra coloring on the main page *******/
 .instanceList.layout-zebra .ui-li-static {
-	background-image : -webkit-linear-gradient(hsv(0, 2%, 97%), hsv(0, 2%, 97%)) !important;
-	color: hsv(0, 67%, 84%) !important;
-	text-shadow: 0 1px 0 hsv(0, 2%, 97%) !important;
+	background-image : -webkit-linear-gradient(white, white) !important;
+	color: hsv(0, 66%, 92%) !important;
+	text-shadow: 0 1px 0 #f5f5f5 !important;
 }
 .instanceList.layout-zebra li:nth-child(even) {
-	background-image : -webkit-linear-gradient(hsv(0, 2%, 97%), hsv(0, 2%, 97%)) !important;
+	background-image : -webkit-linear-gradient(#f5f5f5, #f5f5f5) !important;
 }
 /********* end Zebra coloring *********/
 
