@@ -67,24 +67,6 @@
       {
         "clause": "exit section",
         "_row_num": 14
-      },
-      {
-        "branch_label": "redcrossTest",
-        "_row_num": 17
-      },
-      {
-        "url": "'?' + odkSurvey.getHashString('redcrossTest')",
-        "type": "external_link",
-        "display": {
-          "prompt": {
-            "text": "Open form"
-          }
-        },
-        "_row_num": 18
-      },
-      {
-        "clause": "exit section",
-        "_row_num": 19
       }
     ],
     "settings": [
@@ -161,16 +143,6 @@
           }
         },
         "_row_num": 2
-      },
-      {
-        "choice_list_name": "test_forms",
-        "data_value": "redcrossTest",
-        "display": {
-          "title": {
-            "text": "Redcross Test"
-          }
-        },
-        "_row_num": 3
       }
     ],
     "framework_translations": [
@@ -412,7 +384,7 @@
       {
         "string_token": "opening_survey_instance_detail",
         "text": {
-          "default": "{{#if display_field}}\n        <p>You are at the start of instance: </p>\n        <p>\"{{display_field}}\"</p> \n  {{else}}\n        <p>You are at the start of a new instance.</p>\n  {{/if}}\n        <hr>\n        {{#if last_save_date}}\n            <p>Last saved:</p> \n            <p>{{last_save_date}}</p>\n        {{/if}}\n        <hr>"
+          "default": "{{#if display_field}}&#10;        <p>You are at the start of instance: </p>&#10;        <p>\"{{display_field}}\"</p> &#10;  {{else}}&#10;        <p>You are at the start of a new instance.</p>&#10;  {{/if}}&#10;        <hr>&#10;        {{#if last_save_date}}&#10;            <p>Last saved:</p> &#10;            <p>{{last_save_date}}</p>&#10;        {{/if}}&#10;        <hr>&#10;"
         },
         "_row_num": 36
       },
@@ -730,16 +702,6 @@
             }
           },
           "_row_num": 2
-        },
-        {
-          "choice_list_name": "test_forms",
-          "data_value": "redcrossTest",
-          "display": {
-            "title": {
-              "text": "Redcross Test"
-            }
-          },
-          "_row_num": 3
         }
       ]
     },
@@ -983,7 +945,7 @@
         "opening_survey_instance_detail": {
           "string_token": "opening_survey_instance_detail",
           "text": {
-            "default": "{{#if display_field}}\n        <p>You are at the start of instance: </p>\n        <p>\"{{display_field}}\"</p> \n  {{else}}\n        <p>You are at the start of a new instance.</p>\n  {{/if}}\n        <hr>\n        {{#if last_save_date}}\n            <p>Last saved:</p> \n            <p>{{last_save_date}}</p>\n        {{/if}}\n        <hr>"
+            "default": "{{#if display_field}}&#10;        <p>You are at the start of instance: </p>&#10;        <p>\"{{display_field}}\"</p> &#10;  {{else}}&#10;        <p>You are at the start of a new instance.</p>&#10;  {{/if}}&#10;        <hr>&#10;        {{#if last_save_date}}&#10;            <p>Last saved:</p> &#10;            <p>{{last_save_date}}</p>&#10;        {{/if}}&#10;        <hr>&#10;"
           },
           "_row_num": 36
         },
@@ -1362,27 +1324,12 @@
             "promptIdx": 2
           },
           {
-            "url": "'?' + odkSurvey.getHashString('redcrossTest')",
-            "type": "external_link",
-            "display": {
-              "prompt": {
-                "text": "Open form"
-              }
-            },
-            "_row_num": 18,
-            "__rowNum__": 17,
-            "_token_type": "prompt",
-            "_type": "external_link",
-            "_branch_label_enclosing_screen": "survey/_screen18",
-            "promptIdx": 3
-          },
-          {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 20,
-            "_branch_label_enclosing_screen": "survey/_screen20",
-            "promptIdx": 4
+            "_row_num": 15,
+            "_branch_label_enclosing_screen": "survey/_screen15",
+            "promptIdx": 3
           }
         ],
         "validation_tag_map": {
@@ -1452,38 +1399,25 @@
             "operationIdx": 8
           },
           {
-            "_row_num": 18,
-            "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 15,
             "operationIdx": 9
           },
           {
-            "clause": "exit section",
-            "_row_num": 19,
-            "__rowNum__": 18,
-            "_token_type": "exit_section",
-            "operationIdx": 10
-          },
-          {
-            "_token_type": "exit_section",
-            "clause": "exit section",
-            "_row_num": 20,
-            "operationIdx": 11
-          },
-          {
-            "_row_num": 20,
+            "_row_num": 15,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
-            "operationIdx": 12
+            "operationIdx": 10
           },
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 20,
-            "operationIdx": 13
+            "_row_num": 15,
+            "operationIdx": 11
           }
         ],
         "branch_label_map": {
@@ -1494,10 +1428,8 @@
           "_endif6": 5,
           "arc_fima": 7,
           "_screen13": 7,
-          "redcrossTest": 9,
-          "_screen18": 9,
-          "_contents": 12,
-          "_screen20": 12
+          "_contents": 10,
+          "_screen15": 10
         }
       }
     },
