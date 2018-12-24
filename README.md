@@ -25,12 +25,12 @@ git clone https://github.com/AmericanRedCross/fima.git .
 
 Once everything tested and looks okay
 
-### Push the APP to Android Device
+#### Push the APP to Android Device
 ```
 grunt adbpush
 ```
 
-### Upload APP to the ODK2-Server
+#### Upload APP to the ODK2-Server
 - configure ODK Services app on your android device with admin user for the ODK Cloud endpoints (ODK server)
 - Sync the app with ODK server to upload the app to the server so that any other ODK Table and ODK Survey apps can work with the ODK Server using same FIMA app.
 
